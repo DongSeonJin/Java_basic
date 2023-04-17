@@ -7,7 +7,7 @@ public class Asean {
 	private int finalTermScore; // 기말
 	
 	// 종훈, 일윤, 은영, 재인
-	public static int presentationScore = 29; //29
+	public static int presentationScore; //29
 	
 	public Asean(String name, int attendanceScore, int finalTermScore) {
 		this.name = name;
@@ -16,7 +16,9 @@ public class Asean {
 		
 	}
 	// 스태틱 블록 내부 코드는 프로그램 시작 즉시 자동으로 한 번 호출됩니다.
-	
+	static {
+		presentationScore = 29;
+	}
 	
 	public void showStudentScore() {
 		System.out.println("학생명 : " + this.name);
